@@ -1,25 +1,67 @@
-/* body * {
-    border: 1px solid red;
-} */
+@import url(./fonts.css);
 
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: hsl(0, 0%, 10%);
+    background-color: hsl(0, 0%, 8%);
     color: hsl(0, 0%, 80%);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
 }
 
+body {
+	background: linear-gradient(-45deg, #333333, #555555, #AAAAAA, #E5E5E5);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
 main {
-    background-color: hsl(0, 0%, 20%);
+    background-color: hsl(0, 0%, 12%);
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     border-radius: 10px;
     text-align: center;
     padding: 35px;
-    width: 250px;
+    width: 300px;
+    height: 600px;
+}
+
+main img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 2px solid hsl(74, 62%, 55%)
+}
+
+h1 {
+    margin-block: 30px 5px;
+    font-size: 30px;
+    font-weight: 00;
+}
+
+h2 {
+    margin-block: 0px;
+    color: hsl(74, 62%, 55%);
+    font-weight: 700;
+    font-size: 16px;
 }
 
 ul {
@@ -27,22 +69,32 @@ ul {
 }
 
 .link {
-    background-color: hsl(0, 0%, 40%);
+    background-color: hsl(0, 0%, 20%);
     margin: 8px 0;
-    border-radius: 5px;
-    padding: 10px 0;
+    border-radius: 10px;
+    padding: 15px 0;
+    font-size: 16px;
+    font-weight: 700;    
+    color: hsl(0, 0%, 68%);
+    text-decoration: none;
 }
 
-.attribution {
-    justify-self: flex-end;
+.link:hover {
+    background-color: hsl(74, 62%, 55%);
+    color: 	hsl(180, 25%, 25%);
+    transition: background-color .1s ease-in-out;
+    transition: color .2s ease-in-out;
 }
 
 #link-container {
     display:flex;
     justify-content: space-between;
     flex-direction: column;
+    width: 100%;
 }
 
-a {
-    padding: 5px
+p {
+    font-size: 14px;
+    font-weight: 700;
+    margin-block: 20px;
 }
